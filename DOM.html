@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="DOM.css" />
+  </head>
+  <body>
+    <main>
+      <!-- change text in paragraph -->
+      <h1>DOM assignment</h1>
+      <p>Paragraph 1</p>
+      <p>Paragraph 2</p>
+      <p>Paragraph 3</p>
+      <button onclick="changeText()">change Text</button>
+
+      <!-- add div with text -->
+      <section id="addText"></section>
+      <button onclick="addNewText()">Add Text</button>
+
+      <!-- input validation -->
+      <form>
+        <span id="errorMessage"></span>
+        <div>
+          <label for="">First Name</label>
+          <input type="text" name="" placeholder="Esther" />
+        </div>
+        <div>
+          <label for="">Last Name</label>
+          <input type="text" name="" placeholder="Pomaa" />
+        </div>
+        <div>
+          <label for="">Email</label>
+          <input type="email" name="" placeholder="1234@gmail.com" />
+        </div>
+        <div>
+          <button type="submit" onclick="validateForm()">submit</button>
+        </div>
+      </form>
+      <!-- change background color of div when button clicked -->
+      <div class="mainDiv">Hi click to change background color</div>
+
+      <button onclick="changeBackgroundColor()">change color</button>
+    </main>
+    <script src="Revision1.js"></script>
+  </body>
+</html>
