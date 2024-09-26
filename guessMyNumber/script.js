@@ -60,3 +60,6 @@ document.querySelector('.again').addEventListener('click', () => {
   document.querySelector('.guess').value = '';
   // console.log('hi')
 });
+function displayMessage(message){
+
+}

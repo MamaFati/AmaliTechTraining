@@ -1,6 +1,6 @@
-'use strict';
+
 const showModal = document.querySelectorAll('.show-modal');
-const model = document.querySelector('.modal');
+const modal = document.querySelector('.modal');
 const closeModal = document.querySelector('.close-modal');
 const overlay = document.querySelector('.overlay');
 
@@ -8,11 +8,11 @@ const overlay = document.querySelector('.overlay');
 
 // })
 const openModal = () => {
-  model.classList.remove('hidden');
+  modal.classList.remove('hidden');
   overlay.classList.remove('hidden');
 };
 const exitModal = () => {
-  model.classList.add('hidden');
+  modal.classList.add('hidden');
   overlay.classList.add('hidden');
 };
 for (let i = 0; i < showModal.length; i++) {
@@ -22,7 +22,7 @@ closeModal.addEventListener('click', exitModal);
 overlay.addEventListener('click', exitModal);
 document.addEventListener('keydown', function (e) {
   //   console.log(e);
-  if (e.key === 'Escape' && !model.classList.contains('hidden')) {
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
     exitModal();
   }
 });
