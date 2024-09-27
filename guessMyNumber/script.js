@@ -27,25 +27,39 @@ document.querySelector('.check').addEventListener('click',  () => {
     }
   } else if (guess > secretNumber) {
     // 
-    if (currentScore > 1) {
-      message.textContent = '⚡ Too High!';
-      currentScore--;
-      mainScore.textContent = currentScore;
-    } else {
-      message.textContent = '😭 You lost the gane!';
-      mainScore.textContent = 0;
+    const message ={
+      title: '⚡ Too High!',
+      description: '😭 You lost the game!',
     }
+    // console.log(message)
+    return displayMessage(currentScore,message);
+    // if (currentScore > 1) {
+    //   message.textContent = '⚡ Too High!';
+    //   currentScore--;
+    //   mainScore.textContent = currentScore;
+    // } else {
+    //   message.textContent = '😭 You lost the gane!';
+    //   mainScore.textContent = 0;
+    // }
     // 
-  } else if (guess < secretNumber) {
-    // 
-    if (currentScore > 1) {
-      message.textContent = '🤔 Too low!';
-      currentScore--;
-      mainScore.textContent = currentScore;
-    } else {
-      message.textContent = '😭 You lost the gane!';
-      mainScore.textContent = 0;
+  } 
+  else if (guess < secretNumber) {
+    // \
+    const message ={
+      title: '🤔 Too low!',
+      description: '😭 You lost the game!',
     }
+    // console.log(message)
+
+    return displayMessage(currentScore,message);
+    // if (currentScore > 1) {
+    //   message.textContent = '🤔 Too low!';
+    //   currentScore--;
+    //   mainScore.textContent = currentScore;
+    // } else {
+    //   message.textContent = '😭 You lost the game!';
+    //   mainScore.textContent = 0;
+    // }
   }
 });
 // when the user click on again!!
@@ -60,6 +74,19 @@ document.querySelector('.again').addEventListener('click', () => {
   document.querySelector('.guess').value = '';
   // console.log('hi')
 });
-function displayMessage(message){
+function displayMessage(currentScoreValue,displayResult){
+   console.log(currentScoreValue)
+  console.log(displayResult)
+  if (currentScoreValue > 1) {
+    message.textContent = displayResult.title;
+    currentScore--;
+    mainScore.textContent = currentScore;
+  } else {
+    message.textContent = displayResult.description;
+    mainScore.textContent = 0;
+  }
+  // console.log(currentScore)
+  // console.log(displayResult)
+
 
 }
