@@ -1,0 +1,3 @@
+i. Statically-typed
+Typescript is a javascript with type checking ; In typescript if you decare a variable as a number you can't redeclare it as a string
+tsc => Typescript compiler

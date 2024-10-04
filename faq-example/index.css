@@ -6,6 +6,7 @@ body {
   background-image: url(./assets/images/background-pattern-desktop.svg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   background-color: hsl(275, 100%, 97%);
   position: absolute;
   text-align: left;

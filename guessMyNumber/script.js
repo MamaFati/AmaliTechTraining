@@ -75,8 +75,8 @@ document.querySelector('.again').addEventListener('click', () => {
   // console.log('hi')
 });
 function displayMessage(currentScoreValue,displayResult){
-   console.log(currentScoreValue)
-  console.log(displayResult)
+  //  console.log(currentScoreValue)
+  // console.log(displayResult)
   if (currentScoreValue > 1) {
     message.textContent = displayResult.title;
     currentScore--;
